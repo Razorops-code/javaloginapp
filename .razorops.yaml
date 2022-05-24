@@ -6,7 +6,7 @@ tasks:
     - checkout    
     - commands:
       - |
-         mvn sonar:sonar \
+         mvn clean deploy sonar:sonar \
          -Dsonar.projectKey=razorop-app \
          -Dsonar.host.url=http://${SONAR_WEB_HOST} \
          -Dsonar.login=${TOKEN} \
