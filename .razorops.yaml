@@ -1,0 +1,12 @@
+tasks:
+  hello-job:
+    runner: razorci/openjdk:11-buster
+    steps:
+   
+    - checkout    
+    - commands:
+      - |
+         mvn sonar:sonar \
+         -Dsonar.projectKey=razorop-app \
+         -Dsonar.host.url=http://${SONAR_WEB_HOST} \
+         -Dsonar.login=${TOKEN} \
