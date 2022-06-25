@@ -1,12 +1,7 @@
 tasks:
-  hello-job:
+  unit-test:
     runner: razorci/openjdk:11-buster
     steps:
-   
-    - checkout    
+    - checkout
     - commands:
-      - |
-         mvn clean install sonar:sonar \
-         -Dsonar.projectKey=razorop-app \
-         -Dsonar.host.url=http://${SONAR_WEB_HOST} \
-         -Dsonar.login=${TOKEN} \
+      - mvn clean package
