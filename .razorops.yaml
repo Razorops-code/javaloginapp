@@ -4,4 +4,6 @@ tasks:
     steps:
     - checkout
     - commands:
-      - mvn clean package
+      - |
+        mvn clean package
+        ls -a 
