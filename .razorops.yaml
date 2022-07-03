@@ -15,4 +15,9 @@ tasks:
     #     image: dockergub/webapp:v1
      #    tags: [v1]
       #   dockerfile: Dockerfile.build
+      
+      - docker/push:
+          image: dockerhub.com/webapp
+          tags: [app1]
+
 
