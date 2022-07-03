@@ -10,7 +10,7 @@ tasks:
         ls target
         docker build -t application .
     - docker/push:
-        image: dockerhub.com/webapp
+        image: apllication
         tags: [app1]
 
 
