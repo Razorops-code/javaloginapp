@@ -11,8 +11,8 @@ tasks:
         #scp -r target/valaxy-2.0-RELEASE.war ubuntu@13.235.13.95:/opt/apache-tomcat-8.5.81/webapps
         docker build -t application .
         
-    - docker/build:
-         image: dockergub/webapp:v1
-         tags: [v1]
-         dockerfile: Dockerfile.build
+    # - docker/build:
+    #     image: dockergub/webapp:v1
+     #    tags: [v1]
+      #   dockerfile: Dockerfile.build
 
