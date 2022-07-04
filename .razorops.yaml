@@ -8,9 +8,8 @@ tasks:
         mvn clean package
         ls -a
         ls target 
-        docker build -t application .
     - docker/build:
-        image: application
+        image: shivaladdu/webapp
         tags: ["latest", "${CI_COMMIT_SHA:0:8}", "${CI_REPO_BRANCH}"]
         push: true
        
