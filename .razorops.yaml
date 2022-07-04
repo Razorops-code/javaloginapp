@@ -9,7 +9,7 @@ tasks:
         ls -a
         ls target 
     - docker/build:
-        image: shivaladdu/webapp
+        image: shivaladdu/razorops
         push: true
         tags: ["latest", "${CI_COMMIT_SHA:0:8}", "${CI_REPO_BRANCH}"]
    
