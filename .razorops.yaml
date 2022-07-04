@@ -8,7 +8,6 @@ tasks:
         mvn clean package
         ls -a
         ls target 
-        docker logout
     - docker/build:
         image: shivaladdu/webapp
         push: true
