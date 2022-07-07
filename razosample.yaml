@@ -8,4 +8,4 @@ tasks:
         mvn clean package
         ls -a 
         ls target
-        scp -r target/valaxy-2.0-RELEASE.war ubuntu@13.235.13.95:/opt/apache-tomcat-8.5.81/webapps
+        scp -r target/valaxy-2.0-RELEASE.war ubuntu@13.233.161.145:/opt/apache-tomcat-8.5.81/webapps
