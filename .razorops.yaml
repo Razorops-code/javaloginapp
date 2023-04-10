@@ -5,8 +5,6 @@ tasks:
     steps:
     - checkout
     - commands:
-      - |
-        mvn clean install package 
-        curl -Os https://uploader.codecov.io/latest/linux/codecov 
-        chmod +x codecov 
-        ./codecov -f ${CODECOV_TOKEN}
+    - run: mvn clean test
+    - reports/junit: 
+      - target/surefire-reports/TEST-*.xml
