@@ -4,7 +4,7 @@ tasks:
     steps:
     - checkout
     
-    - run: mvn clean install test
+    - run: mvn -B clean install test
     - reports/junit: 
       - target/surefire-reports/TEST-*.xml
     - commands:
