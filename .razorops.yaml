@@ -9,4 +9,4 @@ tasks:
     - reports/junit: 
       - target/surefire-reports/TEST-*.xml
     - codecov/upload
-        file: covarage.xml
+         file: covarage.xml
