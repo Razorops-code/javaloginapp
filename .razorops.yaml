@@ -7,9 +7,9 @@ tasks:
       - |
         mvn clean install test
         reports/junit: 
-          - target/surefire-reports/TEST-*.xml
+        - target/surefire-reports/TEST-*.xml
         curl -Os https://uploader.codecov.io/latest/linux/codecov 
         chmod +x codecov 
         ./codecov -t ${CODECOV_TOKEN}
         codecov/upload
-        file: covarage.xml
+        file: TEST-*.xml
