@@ -13,4 +13,4 @@ tasks:
         chmod +x codecov 
         ./codecov -t ${CODECOV_TOKEN}
         codecov/upload
-        file: TEST-*.xml
+       
