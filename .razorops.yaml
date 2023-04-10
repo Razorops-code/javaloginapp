@@ -13,5 +13,7 @@ tasks:
         chmod +x codecov 
         ./codecov -t ${CODECOV_TOKEN}
         codecov -f build/reports/coverage/coverage.xml
+        codecov -R coverage
+
 
        
