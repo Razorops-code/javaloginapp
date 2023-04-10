@@ -8,3 +8,5 @@ tasks:
     - run: mvn clean test
     - reports/junit: 
       - target/surefire-reports/TEST-*.xml
+    - codecov/upload
+        file: covarage.xml
