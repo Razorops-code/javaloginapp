@@ -7,5 +7,8 @@ tasks:
     - run: mvn clean test
     - reports/junit: 
       - target/surefire-reports/TEST-*.xml
+    - run curl -Os https://uploader.codecov.io/latest/linux/codecov 
+    - run chmod +x codecov 
+    - run    ./codecov -t ${CODECOV_TOKEN}
     - codecov/upload
     file: covarage.xml
