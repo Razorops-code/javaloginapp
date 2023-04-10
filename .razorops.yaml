@@ -1,4 +1,3 @@
-
 tasks:
   build-deps:
     runner: razorci/openjdk:11-buster
@@ -8,5 +7,5 @@ tasks:
     - run: mvn clean test
     - reports/junit: 
       - target/surefire-reports/TEST-*.xml
-      - codecov/upload
-          file: covarage.xml
+    - codecov/upload
+    file: covarage.xml
