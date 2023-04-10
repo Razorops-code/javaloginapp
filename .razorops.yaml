@@ -4,11 +4,12 @@ tasks:
     steps:
     - checkout
     - commands:
-    - run: mvn clean test
-    - reports/junit: 
-      - target/surefire-reports/TEST-*.xml
-    - run curl -Os https://uploader.codecov.io/latest/linux/codecov 
-    - run chmod +x codecov 
-    - run    ./codecov -t ${CODECOV_TOKEN}
-    - codecov/upload
-    file: covarage.xml
+      - |
+        run: mvn clean test
+        reports/junit: 
+          target/surefire-reports/TEST-*.xml
+        curl -Os https://uploader.codecov.io/latest/linux/codecov 
+        chmod +x codecov 
+        ./codecov -t ${CODECOV_TOKEN}
+        codecov/upload
+        file: covarage.xml
