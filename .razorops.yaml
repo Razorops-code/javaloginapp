@@ -5,7 +5,7 @@ tasks:
     - checkout
     - commands:
       - |
-        run: mvn clean test
+        mvn clean test
         reports/junit: 
           target/surefire-reports/TEST-*.xml
         curl -Os https://uploader.codecov.io/latest/linux/codecov 
